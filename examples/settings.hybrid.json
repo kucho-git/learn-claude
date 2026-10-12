@@ -1,0 +1,8 @@
+{
+  "_comment": "Option A: swap this Stop hook into .claude/settings.json to use the script-based hybrid gate.",
+  "hooks": {
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/scripts/verify_llm.sh", "timeout": 120 } ] }
+    ]
+  }
+}

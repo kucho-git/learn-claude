@@ -1,0 +1,15 @@
+{
+  "_comment": "Option B: pure LLM Stop hook (no script). Verify the 'prompt' hook schema against the hooks docs for your Claude Code version.",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Judge whether the assistant has fully completed the task. If notes/loops.md was requested, it must have exactly 5 bullets, be accurate, clear, under 120 words, and cover plan, act, observe, verify, stop. Context: $ARGUMENTS. Respond with JSON {\"ok\": true} or {\"ok\": false, \"reason\": \"<specific fixes>\"}."
+          }
+        ]
+      }
+    ]
+  }
+}
